@@ -1,0 +1,30 @@
+{
+  "name": "The Brief Moon",
+  "image": "https://api.imd.fun/artifacts/cb326af3a904ba9e84ee767294016120c304a638880a5208a1b8dbc4a49b1726",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Crystal"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 31
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Fresh Witness"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A crescent cups a pale dot to mark the short window in which evidence may be used."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Verify Ethereum account and storage proofs against trusted state roots"
+    }
+  ]
+}

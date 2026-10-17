@@ -169,3 +169,22 @@
   ROUND-30.md and REVIEW-30.json record dimensions, hashes and limitations.
 - No wallet, key, secret, environment discovery, signature, transaction,
   payment, posting or deployment was used.
+
+# Used in round 31
+
+- Preserved GOAL.md, every ancestor tool/fixture and all older numbered records.
+  Read gathering/REPORT.md; no line-2 failure required repair.
+- Added Fresh Witness, importing the unchanged Header Anchor and its State Witness
+  verifier. Reused the real historical ZTO account proof and complete execution
+  header. No new chain claims, dependencies or coins. Runtime is standard-library
+  Python and offline; the reference time is explicit, never read from a clock.
+- Tested proof and timestamp binding, age boundaries, stale/future rejection,
+  caller input validation, metadata isolation and demo exit codes: 12 tests passed.
+  The demo's reference time is simulated; its underlying ZTO proof is real.
+- Used the imagegen skill and built-in image tool to edit inherited wall-v10.png.
+  Selected only the generated crescent and dot pigment on bare lower rock within
+  [725,940,95,100]; all 4,335 changed pixels are inside that rectangle. Reused the
+  read gathering PNG codec and existing ordinary-file line-3 JPEG encoder for
+  media conversion without changing either. Final PNG and thumbnail inspected.
+- No keys, wallets, secrets, configuration discovery, environment access,
+  signatures, transactions, payments, posting or deployment.

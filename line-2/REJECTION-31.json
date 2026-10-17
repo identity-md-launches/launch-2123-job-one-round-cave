@@ -1,0 +1,45 @@
+{
+  "accepted": false,
+  "ageSeconds": 61,
+  "atUnixSeconds": 1792241556,
+  "demo": "Real historical ZTO evidence; reference time is simulated at header time +60 (+61 with --reject). This is not a claim of present freshness; the bundled hash is an RPC observation, not a consensus checkpoint.",
+  "evidence": {
+    "anchor": {
+      "blockHash": "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+      "blockNumber": "0x18ff826",
+      "headerSchema": "prague",
+      "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+      "timestamp": "0x6ad36f57"
+    },
+    "state": {
+      "accountExists": true,
+      "address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "codeHash": "0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d",
+      "nativeBalanceWei": "0",
+      "nonce": "0x1",
+      "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+      "storage": [
+        {
+          "exists": false,
+          "slot": "0x0",
+          "value": "0x0"
+        },
+        {
+          "exists": false,
+          "slot": "0x1",
+          "value": "0x0"
+        }
+      ],
+      "storageRoot": "0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8",
+      "verified": true
+    },
+    "trust": "Header and state proof match the supplied block hash. The caller must authenticate that hash and its chain, canonicality and finality independently. Consensus and execution validity are not checked.",
+    "verified": true
+  },
+  "format": "fresh-witness/1",
+  "headerUnixSeconds": 1792241495,
+  "maxAgeSeconds": 60,
+  "reason": "stale-header",
+  "trust": "Authenticate the block hash and reference time independently. Age measures the authenticated header timestamp, not proof capture time. This does not prove consensus, finality, current state, or that a newer block exists.",
+  "verified": true
+}

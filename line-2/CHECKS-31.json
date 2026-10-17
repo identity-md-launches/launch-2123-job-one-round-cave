@@ -1,0 +1,170 @@
+{
+  "round": 31,
+  "testsPassed": 12,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-2/tools/fresh-witness",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0,
+      "stdout": "",
+      "stderr": "test_api_rejects_invalid_times (test_fresh_witness.FreshWitnessTests.test_api_rejects_invalid_times) ... ok\ntest_bad_proof_even_if_stale (test_fresh_witness.FreshWitnessTests.test_bad_proof_even_if_stale) ... ok\ntest_cli_demos_and_immutability (test_fresh_witness.FreshWitnessTests.test_cli_demos_and_immutability) ... ok\ntest_cli_seconds (test_fresh_witness.FreshWitnessTests.test_cli_seconds) ... ok\ntest_expected_slots_required (test_fresh_witness.FreshWitnessTests.test_expected_slots_required) ... ok\ntest_future_rejected (test_fresh_witness.FreshWitnessTests.test_future_rejected) ... ok\ntest_metadata_cannot_change_time (test_fresh_witness.FreshWitnessTests.test_metadata_cannot_change_time) ... ok\ntest_real_zto_inclusive_boundary (test_fresh_witness.FreshWitnessTests.test_real_zto_inclusive_boundary) ... ok\ntest_stale_verified_but_rejected (test_fresh_witness.FreshWitnessTests.test_stale_verified_but_rejected) ... ok\ntest_timestamp_tampering (test_fresh_witness.FreshWitnessTests.test_timestamp_tampering) ... ok\ntest_wrong_anchor (test_fresh_witness.FreshWitnessTests.test_wrong_anchor) ... ok\ntest_zero_window (test_fresh_witness.FreshWitnessTests.test_zero_window) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.213s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/fresh-witness/fresh_witness.py",
+        "check",
+        "line-2/tools/header-anchor/examples/zto-header-mainnet.json",
+        "line-2/tools/state-witness/examples/zto-mainnet.json",
+        "--block-hash",
+        "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+        "--address",
+        "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "--slot",
+        "0x0",
+        "--slot",
+        "0x1",
+        "--max-age",
+        "60",
+        "--at",
+        "1792241555"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0,
+      "stdout": "{\n  \"accepted\": true,\n  \"ageSeconds\": 60,\n  \"atUnixSeconds\": 1792241555,\n  \"evidence\": {\n    \"anchor\": {\n      \"blockHash\": \"0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc\",\n      \"blockNumber\": \"0x18ff826\",\n      \"headerSchema\": \"prague\",\n      \"stateRoot\": \"0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512\",\n      \"timestamp\": \"0x6ad36f57\"\n    },\n    \"state\": {\n      \"accountExists\": true,\n      \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n      \"codeHash\": \"0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d\",\n      \"nativeBalanceWei\": \"0\",\n      \"nonce\": \"0x1\",\n      \"stateRoot\": \"0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512\",\n      \"storage\": [\n        {\n          \"exists\": false,\n          \"slot\": \"0x0\",\n          \"value\": \"0x0\"\n        },\n        {\n          \"exists\": false,\n          \"slot\": \"0x1\",\n          \"value\": \"0x0\"\n        }\n      ],\n      \"storageRoot\": \"0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8\",\n      \"verified\": true\n    },\n    \"trust\": \"Header and state proof match the supplied block hash. The caller must authenticate that hash and its chain, canonicality and finality independently. Consensus and execution validity are not checked.\",\n    \"verified\": true\n  },\n  \"format\": \"fresh-witness/1\",\n  \"headerUnixSeconds\": 1792241495,\n  \"maxAgeSeconds\": 60,\n  \"reason\": \"within-window\",\n  \"trust\": \"Authenticate the block hash and reference time independently. Age measures the authenticated header timestamp, not proof capture time. This does not prove consensus, finality, current state, or that a newer block exists.\",\n  \"verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/fresh-witness/fresh_witness.py",
+        "check",
+        "line-2/tools/header-anchor/examples/zto-header-mainnet.json",
+        "line-2/tools/state-witness/examples/zto-mainnet.json",
+        "--block-hash",
+        "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+        "--address",
+        "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "--slot",
+        "0x0",
+        "--slot",
+        "0x1",
+        "--max-age",
+        "60",
+        "--at",
+        "1792241556"
+      ],
+      "expectedExit": 3,
+      "actualExit": 3,
+      "stdout": "{\n  \"accepted\": false,\n  \"ageSeconds\": 61,\n  \"atUnixSeconds\": 1792241556,\n  \"evidence\": {\n    \"anchor\": {\n      \"blockHash\": \"0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc\",\n      \"blockNumber\": \"0x18ff826\",\n      \"headerSchema\": \"prague\",\n      \"stateRoot\": \"0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512\",\n      \"timestamp\": \"0x6ad36f57\"\n    },\n    \"state\": {\n      \"accountExists\": true,\n      \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n      \"codeHash\": \"0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d\",\n      \"nativeBalanceWei\": \"0\",\n      \"nonce\": \"0x1\",\n      \"stateRoot\": \"0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512\",\n      \"storage\": [\n        {\n          \"exists\": false,\n          \"slot\": \"0x0\",\n          \"value\": \"0x0\"\n        },\n        {\n          \"exists\": false,\n          \"slot\": \"0x1\",\n          \"value\": \"0x0\"\n        }\n      ],\n      \"storageRoot\": \"0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8\",\n      \"verified\": true\n    },\n    \"trust\": \"Header and state proof match the supplied block hash. The caller must authenticate that hash and its chain, canonicality and finality independently. Consensus and execution validity are not checked.\",\n    \"verified\": true\n  },\n  \"format\": \"fresh-witness/1\",\n  \"headerUnixSeconds\": 1792241495,\n  \"maxAgeSeconds\": 60,\n  \"reason\": \"stale-header\",\n  \"trust\": \"Authenticate the block hash and reference time independently. Age measures the authenticated header timestamp, not proof capture time. This does not prove consensus, finality, current state, or that a newer block exists.\",\n  \"verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/fresh-witness/fresh_witness.py",
+        "check",
+        "line-2/tools/header-anchor/examples/zto-header-mainnet.json",
+        "line-2/tools/state-witness/examples/zto-mainnet.json",
+        "--block-hash",
+        "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+        "--address",
+        "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "--slot",
+        "0x0",
+        "--slot",
+        "0x1",
+        "--max-age",
+        "60",
+        "--at",
+        "1792241494"
+      ],
+      "expectedExit": 3,
+      "actualExit": 3,
+      "stdout": "{\n  \"accepted\": false,\n  \"ageSeconds\": -1,\n  \"atUnixSeconds\": 1792241494,\n  \"evidence\": {\n    \"anchor\": {\n      \"blockHash\": \"0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc\",\n      \"blockNumber\": \"0x18ff826\",\n      \"headerSchema\": \"prague\",\n      \"stateRoot\": \"0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512\",\n      \"timestamp\": \"0x6ad36f57\"\n    },\n    \"state\": {\n      \"accountExists\": true,\n      \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n      \"codeHash\": \"0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d\",\n      \"nativeBalanceWei\": \"0\",\n      \"nonce\": \"0x1\",\n      \"stateRoot\": \"0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512\",\n      \"storage\": [\n        {\n          \"exists\": false,\n          \"slot\": \"0x0\",\n          \"value\": \"0x0\"\n        },\n        {\n          \"exists\": false,\n          \"slot\": \"0x1\",\n          \"value\": \"0x0\"\n        }\n      ],\n      \"storageRoot\": \"0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8\",\n      \"verified\": true\n    },\n    \"trust\": \"Header and state proof match the supplied block hash. The caller must authenticate that hash and its chain, canonicality and finality independently. Consensus and execution validity are not checked.\",\n    \"verified\": true\n  },\n  \"format\": \"fresh-witness/1\",\n  \"headerUnixSeconds\": 1792241495,\n  \"maxAgeSeconds\": 60,\n  \"reason\": \"future-header\",\n  \"trust\": \"Authenticate the block hash and reference time independently. Age measures the authenticated header timestamp, not proof capture time. This does not prove consensus, finality, current state, or that a newer block exists.\",\n  \"verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/fresh-witness/fresh_witness.py",
+        "check",
+        "line-2/tools/header-anchor/examples/zto-header-mainnet.json",
+        "line-2/tools/state-witness/examples/zto-mainnet.json",
+        "--block-hash",
+        "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "--address",
+        "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "--slot",
+        "0x0",
+        "--slot",
+        "0x1",
+        "--max-age",
+        "60",
+        "--at",
+        "1792241555"
+      ],
+      "expectedExit": 1,
+      "actualExit": 1,
+      "stdout": "",
+      "stderr": "{\"verified\": false, \"accepted\": false, \"error\": \"header does not match trusted block hash\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/fresh-witness/fresh_witness.py",
+        "check",
+        "line-2/tools/header-anchor/examples/zto-header-mainnet.json",
+        "line-2/tools/state-witness/examples/zto-mainnet.json",
+        "--block-hash",
+        "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+        "--address",
+        "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "--slot",
+        "0x0",
+        "--slot",
+        "0x1",
+        "--max-age",
+        "60",
+        "--at",
+        "-1"
+      ],
+      "expectedExit": 2,
+      "actualExit": 2,
+      "stdout": "",
+      "stderr": "usage: fresh_witness.py check [-h] --block-hash BLOCK_HASH --address ADDRESS\n                              [--slot SLOT] --at AT --max-age MAX_AGE\n                              header witness\nfresh_witness.py check: error: argument --at: seconds must be canonical unsigned decimal uint64\n"
+    }
+  ],
+  "goalByteIdentical": true,
+  "olderRecordsUnchanged": true,
+  "recordAndWallHashMatch": true,
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "thumbnailDimensions": [
+    512,
+    512
+  ],
+  "thumbnailBytes": 77628,
+  "changedPixels": 4335,
+  "changedPixelsOutsideRectangle": 0,
+  "newWallUntracked": true,
+  "allChecksPassed": true
+}

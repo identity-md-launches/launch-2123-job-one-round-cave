@@ -1,0 +1,59 @@
+{
+  "round": 31,
+  "ancestorSha256": "828001a17c08fc2a3f1ab6508f60b5b2f673724e4b5778215d83a10ca456e325",
+  "generatedMotifSha256": "aa4c0079bb3dba3154c83545492d733763b323354c866bc28a311da501a0c47a",
+  "wallSha256": "cb326af3a904ba9e84ee767294016120c304a638880a5208a1b8dbc4a49b1726",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "channels": "RGB",
+  "newMarkRectangle": [
+    725,
+    940,
+    95,
+    100
+  ],
+  "changedPixels": 4335,
+  "changedPixelsOutsideRectangle": 0,
+  "method": "Image-tool-generated ochre crescent and chalk dot; selected pigment composited onto unused inherited rock.",
+  "visualReview": "Explicitly inspected finished PNG and JPEG. Earlier paintings, rock, cracks, lighting and framing preserved. Central Pepe retains two five-digit hands; no hands or stencils added. No text, numbers, logos, borders or prohibited symbols observed.",
+  "unmetVisualRequirements": [],
+  "images": [
+    {
+      "path": "artifacts/line-2/wall-v11.png",
+      "format": "PNG",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 3943546,
+      "sha256": "cb326af3a904ba9e84ee767294016120c304a638880a5208a1b8dbc4a49b1726"
+    },
+    {
+      "path": "artifacts/line-2/wall.png",
+      "format": "PNG",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 3943546,
+      "sha256": "cb326af3a904ba9e84ee767294016120c304a638880a5208a1b8dbc4a49b1726"
+    },
+    {
+      "path": "dist/line-2/31.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 77628,
+      "sha256": "043284b96c034364fee3b6549e0ece6f914e30926a35aeecaee52c5007286a76"
+    }
+  ],
+  "limitations": [
+    "Small crescent mark is modest at thumbnail scale.",
+    "Visual review is a local observation, not independent certification."
+  ]
+}
