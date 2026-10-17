@@ -1,0 +1,25 @@
+{
+  "schema": "line-1-checks/v1",
+  "number": 30,
+  "new_tests_passed": 21,
+  "real_file_trial": "REAL-TRIAL-30.json",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG",
+  "wall_sha256": "da1c35f021088696a2a6b5f2ffb9ee6b68be4ea3fa6e9ff93a6c0f86756d2439",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 76101,
+  "changed_pixels": 3917,
+  "changed_pixels_outside_rectangle": 0,
+  "older_records_and_goal_unchanged": true,
+  "output_hash_matches_record": true,
+  "required_outputs_untracked": true,
+  "unmet_visual_requirements": [],
+  "assessment": "Local checks and visual inspection; no independent certification."
+}

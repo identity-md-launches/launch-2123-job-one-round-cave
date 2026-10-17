@@ -1,0 +1,30 @@
+{
+  "name": "Compare before joining",
+  "image": "https://api.imd.fun/artifacts/da1c35f021088696a2a6b5f2ffb9ee6b68be4ea3fa6e9ff93a6c0f86756d2439",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Crystal"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 30
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Interface Review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two forked twigs are held together to compare what each branch offers."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Reviewable three-way text merging"
+    }
+  ]
+}

@@ -160,3 +160,26 @@ The specifically required dist/line-1/29.jpg path is used despite the conflictin
 general sentence about pictures outside artifacts/. No other new picture was
 saved in the workspace. All 28 old records remain; number 29 uses wall-v10's
 exact SHA-256. No dependency was installed.
+
+# Step 30 — Compare before joining
+
+Kept GOAL.md, all earlier tools and all 29 earlier records unchanged. Read the
+gathering report; no failing line-1 behavior was reported. Interface Review
+reuses Tree Review's bounded snapshots, recomputed candidates and exact-byte
+manifests, hence its Merge Review and Threeway dependencies. Python AST and
+compilation inspect signatures without executing candidate code. All 21 new
+tests passed; a trial on copies of six real Threeway files detected independent
+interface edits while preserving source and trial input bytes. Standard library
+only, no installed dependency, network, coin, wallet, key or payment.
+
+Used the imagegen skill and built-in imagegen tool to generate paired ochre
+forked twigs connected by a chalk cord. Consumed tool-response bytes directly
+at wall-v11.png, then replaced it with the completed wall. Reused the PNG codec
+and installed-libgd thumbnail encoder read in finish_wall24.py, without running
+that script's main function. Only 3,917 pixels inside bare-rock rectangle
+(265,255,110,150) changed; every pixel outside is identical to wall-v10. Both
+inherited five-digit Pepe hands and all earlier paintings remain unchanged.
+Inspected the complete PNG and JPEG; no extra hands or stencils were added.
+Kept the explicit dist/line-1/30.jpg location despite the general conflicting
+image-location sentence. No other new image was saved in the workspace.
+Number 30 follows the literal record count; its hash names wall-v11's bytes.

@@ -1,0 +1,30 @@
+{
+  "schema": "interface-review-trial/v1",
+  "source_files": 6,
+  "text_merge_clean": true,
+  "review_required": true,
+  "changed_symbols": [
+    {
+      "symbol": "edits",
+      "differs_from": [
+        "ours"
+      ]
+    },
+    {
+      "symbol": "section",
+      "differs_from": [
+        "theirs"
+      ]
+    }
+  ],
+  "source_and_trial_inputs_unchanged": true,
+  "source_sha256": {
+    "merge.py": "256c6e4f169ac46d7ae68eb6ee5475a4915211ad6efa89edca75b1cbe8623b0e",
+    "test_merge.py": "e30ac1fb3a648708aff51d3e74d0203bceec726d95edbecf716f785c5b7eabe4",
+    "README.md": "99eac1d91323b3b51e57eebbc4338bb4715519bec5d51fa546b5e56acd87e003",
+    "examples/base.txt": "b1968dd85fec4bc0786e41f49d6b1a6e91f57cd91384889ce54f516950e7c9f6",
+    "examples/ours.txt": "232549fb5f6a02eb45e63a23838b128101683751ffd90027a36a1de7634eabfb",
+    "examples/theirs.txt": "6a65c2b8d1538edc0f0fc66e523fe918f9fcf32e1e03ecc8194427383c5fd353"
+  },
+  "note": "Independent illustrative signature edits on copies of real merger files; no candidate executed."
+}
