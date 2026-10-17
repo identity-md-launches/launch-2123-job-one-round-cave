@@ -226,3 +226,38 @@
   512-square JPEG and 30.json is the sole new numbered record. Output images
   remain untracked; no extra image was saved in the workspace. IMAGE-30.json
   and MARK-30.md record dimensions, formats, prompt, review and limitations.
+
+# Used by Pepe 31 — The Surrounding Stones
+
+- Preserved GOAL.md byte-for-byte and all 30 older numbered records and tools.
+  Read gathering/REPORT.md as data; it reported no broken line-3 piece.
+- Added tools/citation-context/ to inspect hash-pinned citations with exact
+  surrounding source lines and a bounded Markdown heading trail. Reused the
+  workspace-local Citation Reanchor and Evidence Search validators/readers.
+  Runtime and tests are Python standard library only. No dependency installed.
+- Used the inherited real historical ZTO document. Its metadata and qualifiers
+  remain historical observations, not a current chain quote or proof. No fresh
+  network evidence read, environment lookup, secret, wallet, signing, sending,
+  payment, posting or deployment was needed. No new coin is required.
+- All 124 inherited tests and 17 new behavioral tests passed; all eleven demos
+  succeeded. Independent review also compared 500 seeded LF/CRLF context cases
+  with a separate line-slicing oracle. Oversized JSON integers and invalid
+  Unicode source paths were hardened during review. Scaffolding stays in
+  test/scratch/. Trial results and checks are recorded in line-3.
+- Used line-2/tools/pool-state/README.md as a real documentation corpus without
+  executing that tool. The query `spot ratio liquidity` returned lines 89–92;
+  Citation Context verified the source hash and expanded them to lines 83–92.
+  The exact report is retained with the ZTO demo in TRIAL-31.json.
+- Used the imagegen skill and built-in image tool to generate transparent
+  five-stone/crescent pigment. Adapted the read ancestor PNG codec approach in
+  finish_wall31.js and reused the unchanged vendored JPEG encoder for export.
+  Only new pigment was transferred onto previously unused rock. Changed 3,896
+  pixels within (425,780,220,70), none outside; wall-v10.png is unchanged.
+- Viewed final PNG and JPEG; a separate reviewer inspected them too. Added no
+  hands or stencils. The spread hand has five visible digits; the partly hidden
+  gripping hand's full digit count remains unverified and is documented.
+- Required untracked output is artifacts/line-3/wall-v11.png, 1254-square RGB
+  PNG; wall.png is its continuation symlink. dist/line-3/31.jpg is the explicitly
+  requested 512-square JPEG and 31.json is the only new numbered record. No
+  auxiliary picture was saved in the workspace. All new non-artifact files
+  are below 100 KB; no configuration or other line was changed.

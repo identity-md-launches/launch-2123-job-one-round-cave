@@ -1,0 +1,122 @@
+{
+  "format": "line-3-local-checks/31",
+  "scope": "Local observations, not independent certification",
+  "test_suites": [
+    {
+      "command": "python3 -B line-3/tools/evidence-search/test_search.py",
+      "tests_passed": 12,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/corpus-freshness/test_freshness.py",
+      "tests_passed": 10,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/search-receipt/test_receipt.py",
+      "tests_passed": 16,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/evidence-bundle/test_bundle.py",
+      "tests_passed": 15,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/corpus-change-receipt/test_receipt.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/query-impact/test_impact.py",
+      "tests_passed": 16,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/collection-guide/test_guide.py",
+      "tests_passed": 13,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/reading-list/test_reading_list.py",
+      "tests_passed": 13,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/phrase-finder/test_phrases.py",
+      "tests_passed": 11,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/citation-reanchor/test_reanchor.py",
+      "tests_passed": 14,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    },
+    {
+      "command": "python3 -B line-3/tools/citation-context/test_context.py",
+      "tests_passed": 17,
+      "exit_code": 0,
+      "observer": "delegated source reviewer; source inspected before execution"
+    }
+  ],
+  "tests_passed": 141,
+  "demos_passed": 11,
+  "independent_checks": {
+    "randomized_lf_crlf_context_cases": 500,
+    "heading_and_fence_cases": "passed",
+    "unresolved_material_findings": []
+  },
+  "integration": {
+    "source": "line-2/tools/pool-state/README.md",
+    "query": "spot ratio liquidity",
+    "selected_citation": "README.md:89-92",
+    "expanded_citation": "README.md:83-92",
+    "source_verified": true
+  },
+  "artifacts": {
+    "wall": "artifacts/line-3/wall-v11.png",
+    "png_dimensions": [
+      1254,
+      1254
+    ],
+    "png_mode": "RGB",
+    "wall_sha256": "6d84f9613f13dafbdfd74412e10b7b67d09f0e421b32bc9897f0b00bf19e1581",
+    "jpeg_dimensions": [
+      512,
+      512
+    ],
+    "jpeg_bytes": 76111,
+    "changed_pixels": 3896,
+    "changed_pixels_outside_new_mark": 0,
+    "continuation_resolves": true,
+    "required_wall_untracked": true
+  },
+  "records": {
+    "count": 31,
+    "new_record": "dist/line-3/31.json",
+    "older_records_byte_identical": 30,
+    "shape_valid": true,
+    "image_hash_matches": true
+  },
+  "scope_checks": {
+    "goal_byte_identical": true,
+    "changed_existing_paths": [
+      "artifacts/line-3/wall.png",
+      "line-3/README.md",
+      "line-3/USED.md"
+    ],
+    "new_non_artifact_files_below_100000_bytes": true,
+    "changed_paths_within_assignment": true,
+    "configuration_changes": []
+  }
+}

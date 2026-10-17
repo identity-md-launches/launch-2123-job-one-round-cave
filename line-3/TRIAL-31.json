@@ -1,0 +1,338 @@
+{
+  "historical_zto_demo": {
+    "example": "historical ZTO document; local evidence, not a current chain observation",
+    "live": {
+      "format": "citation-context/v1",
+      "mode": "live",
+      "path": "zto.md",
+      "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+      "source_verified": true,
+      "source_line_count": 15,
+      "selection": {
+        "line_start": 3,
+        "line_end": 6,
+        "citation": "zto.md:3-6",
+        "saved_text_checked": true
+      },
+      "context": {
+        "line_start": 1,
+        "line_end": 15,
+        "citation": "zto.md:1-15",
+        "before_requested": 2,
+        "after_requested": 9,
+        "before_returned": 2,
+        "after_returned": 9,
+        "clipped_at_start": false,
+        "clipped_at_end": false,
+        "lines": [
+          {
+            "number": 1,
+            "selected": false,
+            "text": "# ZTO on Ethereum"
+          },
+          {
+            "number": 2,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 3,
+            "selected": true,
+            "text": "ZTO token name: Zero To One."
+          },
+          {
+            "number": 4,
+            "selected": true,
+            "text": "Contract address: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e."
+          },
+          {
+            "number": 5,
+            "selected": true,
+            "text": "Chain ID: 1 (Ethereum mainnet)."
+          },
+          {
+            "number": 6,
+            "selected": true,
+            "text": "Token decimals: 18."
+          },
+          {
+            "number": 7,
+            "selected": false,
+            "text": "Total supply in smallest token units: 1000000000000000000000000000."
+          },
+          {
+            "number": 8,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 9,
+            "selected": false,
+            "text": "## Observation and trust"
+          },
+          {
+            "number": 10,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 11,
+            "selected": false,
+            "text": "Observed at block 26212513 with hash 0x83d07a0a4b3c02350969625cfac303f2971924f350858d9ccbdc85bc82fa64fc."
+          },
+          {
+            "number": 12,
+            "selected": false,
+            "text": "Public RPC source: https://ethereum-rpc.publicnode.com"
+          },
+          {
+            "number": 13,
+            "selected": false,
+            "text": "The companion zto-mainnet.json contains the raw eth_call results and retrieval time."
+          },
+          {
+            "number": 14,
+            "selected": false,
+            "text": "This is a recorded RPC observation, not an independent proof or a current quote."
+          },
+          {
+            "number": 15,
+            "selected": false,
+            "text": "Use exact integer token units for accounting; search results do not authorize a payment."
+          }
+        ]
+      },
+      "section_headings": [
+        {
+          "level": 1,
+          "line": 1,
+          "text": "# ZTO on Ethereum",
+          "citation": "zto.md:1-1"
+        }
+      ],
+      "heading_scope": "ATX Markdown headings outside fenced code at the selection start"
+    },
+    "snapshot": {
+      "format": "citation-context/v1",
+      "mode": "snapshot",
+      "path": "zto.md",
+      "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+      "source_verified": false,
+      "source_line_count": 15,
+      "selection": {
+        "line_start": 3,
+        "line_end": 6,
+        "citation": "zto.md:3-6",
+        "saved_text_checked": true
+      },
+      "context": {
+        "line_start": 1,
+        "line_end": 15,
+        "citation": "zto.md:1-15",
+        "before_requested": 2,
+        "after_requested": 9,
+        "before_returned": 2,
+        "after_returned": 9,
+        "clipped_at_start": false,
+        "clipped_at_end": false,
+        "lines": [
+          {
+            "number": 1,
+            "selected": false,
+            "text": "# ZTO on Ethereum"
+          },
+          {
+            "number": 2,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 3,
+            "selected": true,
+            "text": "ZTO token name: Zero To One."
+          },
+          {
+            "number": 4,
+            "selected": true,
+            "text": "Contract address: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e."
+          },
+          {
+            "number": 5,
+            "selected": true,
+            "text": "Chain ID: 1 (Ethereum mainnet)."
+          },
+          {
+            "number": 6,
+            "selected": true,
+            "text": "Token decimals: 18."
+          },
+          {
+            "number": 7,
+            "selected": false,
+            "text": "Total supply in smallest token units: 1000000000000000000000000000."
+          },
+          {
+            "number": 8,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 9,
+            "selected": false,
+            "text": "## Observation and trust"
+          },
+          {
+            "number": 10,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 11,
+            "selected": false,
+            "text": "Observed at block 26212513 with hash 0x83d07a0a4b3c02350969625cfac303f2971924f350858d9ccbdc85bc82fa64fc."
+          },
+          {
+            "number": 12,
+            "selected": false,
+            "text": "Public RPC source: https://ethereum-rpc.publicnode.com"
+          },
+          {
+            "number": 13,
+            "selected": false,
+            "text": "The companion zto-mainnet.json contains the raw eth_call results and retrieval time."
+          },
+          {
+            "number": 14,
+            "selected": false,
+            "text": "This is a recorded RPC observation, not an independent proof or a current quote."
+          },
+          {
+            "number": 15,
+            "selected": false,
+            "text": "Use exact integer token units for accounting; search results do not authorize a payment."
+          }
+        ]
+      },
+      "section_headings": [
+        {
+          "level": 1,
+          "line": 1,
+          "text": "# ZTO on Ethereum",
+          "citation": "zto.md:1-1"
+        }
+      ],
+      "heading_scope": "ATX Markdown headings outside fenced code at the selection start"
+    }
+  },
+  "documentation_integration": {
+    "corpus": "line-2/tools/pool-state",
+    "query": "spot ratio liquidity",
+    "search_hit": {
+      "path": "README.md",
+      "line_start": 89,
+      "line_end": 92,
+      "citation": "README.md:89-92",
+      "sha256": "663c168759d7d1eff084a9faabda7f7751c1c7ae5b009e9daa80ffdc641cf64f",
+      "source_verified": true,
+      "score": 5.16129124,
+      "matched_terms": [
+        "liquidity",
+        "ratio",
+        "spot"
+      ],
+      "text": "layout from those bytes. The caller must authenticate the checkpoint's chain,\ncanonicality and finality. A spot ratio provides no liquidity, executable swap\nquote, TWAP, slippage bound or manipulation resistance. Nothing here should\nauthorize a payment automatically. No additional coin is required."
+    },
+    "context": {
+      "format": "citation-context/v1",
+      "mode": "live",
+      "path": "README.md",
+      "sha256": "663c168759d7d1eff084a9faabda7f7751c1c7ae5b009e9daa80ffdc641cf64f",
+      "source_verified": true,
+      "source_line_count": 92,
+      "selection": {
+        "line_start": 89,
+        "line_end": 92,
+        "citation": "README.md:89-92",
+        "saved_text_checked": false
+      },
+      "context": {
+        "line_start": 83,
+        "line_end": 92,
+        "citation": "README.md:83-92",
+        "before_requested": 6,
+        "after_requested": 6,
+        "before_returned": 6,
+        "after_returned": 0,
+        "clipped_at_start": false,
+        "clipped_at_end": true,
+        "lines": [
+          {
+            "number": 83,
+            "selected": false,
+            "text": "\"24 bits empty | 24 bits lpFee | 12 bits protocolFee 1->0 | 12 bits protocolFee 0->1 | 24 bits tick | 160 bits sqrtPriceX96\"."
+          },
+          {
+            "number": 84,
+            "selected": false,
+            "text": "These are documentation references, not runtime dependencies."
+          },
+          {
+            "number": 85,
+            "selected": false,
+            "text": ""
+          },
+          {
+            "number": 86,
+            "selected": false,
+            "text": "The proof commits to bytes. The assignment's pool-ID/currency binding and the"
+          },
+          {
+            "number": 87,
+            "selected": false,
+            "text": "deployed PoolManager's v4 layout remain explicit interpretation assumptions;"
+          },
+          {
+            "number": 88,
+            "selected": false,
+            "text": "this tool does not prove the pool key preimage, manager bytecode or storage"
+          },
+          {
+            "number": 89,
+            "selected": true,
+            "text": "layout from those bytes. The caller must authenticate the checkpoint's chain,"
+          },
+          {
+            "number": 90,
+            "selected": true,
+            "text": "canonicality and finality. A spot ratio provides no liquidity, executable swap"
+          },
+          {
+            "number": 91,
+            "selected": true,
+            "text": "quote, TWAP, slippage bound or manipulation resistance. Nothing here should"
+          },
+          {
+            "number": 92,
+            "selected": true,
+            "text": "authorize a payment automatically. No additional coin is required."
+          }
+        ]
+      },
+      "section_headings": [
+        {
+          "level": 1,
+          "line": 1,
+          "text": "# Pool State",
+          "citation": "README.md:1-1"
+        },
+        {
+          "level": 2,
+          "line": 67,
+          "text": "## Layout and trust limits",
+          "citation": "README.md:67-67"
+        }
+      ],
+      "heading_scope": "ATX Markdown headings outside fenced code at the selection start"
+    }
+  }
+}

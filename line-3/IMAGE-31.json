@@ -1,0 +1,55 @@
+{
+  "wall": "artifacts/line-3/wall-v11.png",
+  "format": "PNG",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "sha256": "6d84f9613f13dafbdfd74412e10b7b67d09f0e421b32bc9897f0b00bf19e1581",
+  "ancestor_sha256": "6f73df1ec748dd65c1f4755934c54be0fd6328fec7f689e683b21b90dedddb42",
+  "generated_motif_sha256": "11d9718a479cc8b35e8cf13bddce2ed8cb6dd4bd5df989969d391074ef3c20d5",
+  "generated_motif_dimensions": [
+    1983,
+    793
+  ],
+  "generated_crop": [
+    82,
+    149,
+    1826,
+    502
+  ],
+  "new_mark_rectangle": [
+    425,
+    780,
+    220,
+    70
+  ],
+  "changed_pixels": 3896,
+  "changed_pixels_outside_rectangle": 0,
+  "thumbnail": {
+    "path": "dist/line-3/31.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 76111
+  },
+  "visual_review": "Finished PNG and JPEG explicitly viewed by two reviewers. Recognizable heavy-lidded, broad-mouthed Pepe, inherited motifs, warm rock, cracks and framing preserved. Added five worn ochre stones and charcoal crescent on unused rock. No letters, numbers, logos, signatures, borders, prohibited symbols, new hands or stencils observed.",
+  "unmet_visual_requirements": [],
+  "hand_review": {
+    "new_hands_or_stencils": 0,
+    "inherited_spread_hand_digits_visible": 5,
+    "inherited_gripping_hand": "Partly obscured by the magnifier; complete digit count cannot be confidently verified. Preserved pixel-identically.",
+    "lower_left_appendage": "A foot, not a hand."
+  },
+  "visual_limitations": [
+    "Inherited partly obscured gripping-hand digit count remains unverified.",
+    "New mark is muted at 512-pixel thumbnail scale."
+  ],
+  "unverified_visual_requirements": [
+    "All five digits on the inherited partly obscured gripping hand."
+  ],
+  "generation": "Built-in image_gen transparent motif; prompt summary and finishing method recorded in MARK-31.md. JavaScript finishing transfers only generated pigment to unused rock."
+}

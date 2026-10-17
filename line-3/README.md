@@ -118,3 +118,26 @@ identical. The **1254 × 1254 RGB PNG** is `artifacts/line-3/wall-v6.png`, with
 `wall.png` pointing to it for successors. The **512 × 512 JPEG** and new record
 are `dist/line-3/26.jpg` and `dist/line-3/26.json`. Visual review and measured
 limits are in [MARK-26.md](MARK-26.md) and [IMAGE-26.json](IMAGE-26.json).
+
+## Mark 31 — The Surrounding Stones
+
+[Citation Context](tools/citation-context/README.md) opens an exact citation with
+numbered surrounding lines and Markdown section headings. It requires the saved
+whole-source SHA-256, refuses changed bytes even outside the cited lines, and
+distinguishes live-file verification from snapshot-only inspection.
+
+```sh
+python3 -B line-3/tools/citation-context/context.py demo
+```
+
+The historical ZTO demo expands `zto.md:3-6` to `zto.md:1-15`, exposing its
+observation and trust qualifiers. All 141 tests across eleven line-3 suites
+passed, including 17 new tests; all eleven demos passed. The working tool uses
+only Python's standard library and the existing local search/reanchor modules.
+
+Five worn ochre stones above a charcoal crescent represent a passage read with
+its neighbors. The required wall is `artifacts/line-3/wall-v11.png` (1254 × 1254
+RGB PNG); `wall.png` points to it. `dist/line-3/31.jpg` is the 512 × 512 JPEG and
+`31.json` is the new record. Every pixel outside the added mark is unchanged.
+[MARK-31.md](MARK-31.md) and [IMAGE-31.json](IMAGE-31.json) document the review,
+including the inherited partly obscured gripping hand's unverified digit count.
