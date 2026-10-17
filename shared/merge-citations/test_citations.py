@@ -32,6 +32,12 @@ class Citations(unittest.TestCase):
         self.assertEqual(result['candidate']['unique_current_citation']['citation'], 'zto.md:5-8')
         self.assertEqual(result['candidate_sha256'], result['candidate']['current_sha256'])
         self.assertFalse(result['candidate']['source_verified'])
+        context = result['candidate_context']
+        self.assertEqual(context['selection']['citation'], 'zto.md:5-8')
+        self.assertEqual(context['sha256'], result['candidate_sha256'])
+        self.assertFalse(context['source_verified'])
+        self.assertTrue(any('not an independent proof' in line['text']
+                            for line in context['context']['lines']))
 
     def test_independent_edits_and_immutable_inputs(self):
         trees = self.trees('heading\n' + self.text, self.text + 'footnote\n')
@@ -47,12 +53,14 @@ class Citations(unittest.TestCase):
         self.assertEqual(result['status'], 'needs-review')
         self.assertEqual(result['candidate']['status'], 'missing')
         self.assertIsNone(result['candidate']['unique_current_citation'])
+        self.assertIsNone(result['candidate_context'])
 
     def test_duplicate_passage_is_ambiguous(self):
         result = m.inspect(self.trees(self.text + 'ZTO\n18 decimals\n'), self.anchor)
         self.assertEqual(result['candidate']['status'], 'ambiguous')
         self.assertEqual(result['candidate']['match_count'], 2)
         self.assertEqual(result['status'], 'needs-review')
+        self.assertIsNone(result['candidate_context'])
 
     def test_conflict_has_no_candidate_citation(self):
         result = m.inspect(self.trees(self.text.replace('18', '17'),
@@ -60,6 +68,7 @@ class Citations(unittest.TestCase):
         self.assertEqual(result['status'], 'blocked')
         self.assertIsNone(result['candidate'])
         self.assertIsNone(result['candidate_sha256'])
+        self.assertIsNone(result['candidate_context'])
 
     def test_unrelated_conflict_blocks_overall_review(self):
         trees = self.trees()
@@ -69,6 +78,7 @@ class Citations(unittest.TestCase):
         self.assertEqual(result['status'], 'blocked')
         self.assertEqual(result['conflicted_paths'], ['other.md'])
         self.assertEqual(result['candidate']['status'], 'unchanged')
+        self.assertEqual(result['candidate_context']['selection']['citation'], 'note.md:2-3')
 
     def test_deletion_is_distinct_from_missing_excerpt(self):
         trees = self.trees()
@@ -77,6 +87,7 @@ class Citations(unittest.TestCase):
         self.assertEqual(result['status'], 'deleted')
         self.assertEqual(result['candidate']['status'], 'deleted')
         self.assertIsNone(result['candidate_sha256'])
+        self.assertIsNone(result['candidate_context'])
 
     def test_delete_modify_conflict(self):
         trees = self.trees('heading\n' + self.text)

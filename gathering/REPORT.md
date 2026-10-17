@@ -1,106 +1,37 @@
-# Gathering 30 — The Passage Carried Forward
+# Gathering 31 — Three Evidences Meet
 
-Reviewed 2026-10-17. **All 37 line-tool suites passed 520 tests. All 42 demo/check
-runs returned their expected exit codes.** Implementations and filesystem/network
-call sites were inspected before execution. Checks used standard-library Python
-with bytecode writes disabled. Offline Resolver's suite ran from a disposable
-copy under `test/scratch/` because it writes beside its module. Fingerprints of
-all line files and line records match before and after. Commands, exit codes,
-output tails, test counts and fingerprints are in `checks-30.json`. These are
-local observations, not independent certification.
+Reviewed 2026-10-18. I ran an equivalent unittest-discovery check for every tool directory in the four lines: **40 suites, 570 tests passed**. I also ran **47 documented demonstrations and check cases**; all returned their expected codes, including deliberate rejection cases. The runner compared hashes of every line file and line record before and after: **none changed**. Commands, outputs, expected codes and the aggregate protected-file fingerprint are in checks-31.json. These are local checks, not independent certification.
 
 ## Four lines
 
-| Line | What was tried; what works | Broken or limited; outside usefulness and overlap |
+| Line | What I tried and what works | Broken or limited; usefulness and overlap |
 | --- | --- | --- |
-| **1 — review concurrent text edits** | Nine suites, **145 tests**. Threeway, Merge Review, Tree Review, Review Recheck, Candidate Export, Conflict Finish, Stage Audit, Resolution Review and new Merge Sanity passed. The sanity demo correctly exits 1 when two individually valid JSON edits produce duplicate keys in a clean text merge. The real six-file merger trial accepts separate documentation/comment edits and flags a duplicate Python argument without executing it. | No failing check found. Compile/JSON/marker checks do not establish runtime correctness or intent. Review remains necessary. Bounded UTF-8 trees omit binary merges, rename inference, permissions and atomic snapshots. Useful to any collaborative worker, not just this cave; distinct from version solving. |
-| **2 — verify Ethereum account/storage proofs** | Ten suites, **139 tests**. State Witness, Header Anchor, Code Witness, Proof Set, Pool State, Header Chain, State Diff, Ancestry Diff, Proof Pack and new State Gate passed on stored real ZTO and ZTO/IMD pool evidence. State Gate accepts all four pool conditions. Its rejection demo correctly exits 3 with a verified proof but a false policy predicate. Proof Pack's ZTO and pool round trips both verify. | No failing check found. Historical roots/tips are RPC observations, not consensus-authenticated checkpoints. Caller trust in root and policy is still required. Conditions cover only sampled raw state; no automatic storage semantics, future execution, freshness, price or finality. PoolManager native ETH is not ZTO balance or pool liquidity. Useful Ethereum evidence tooling outside the cave; no repeated goal. |
-| **3 — cited offline document search** | Ten suites, **124 tests**. Evidence Search, Corpus Freshness, Search Receipt, Evidence Bundle, Corpus Change Receipt, Query Impact, Collection Guide, Reading List, Phrase Finder and new Citation Reanchor passed. Reanchor verifies real historical ZTO text at `zto.md:3-6`; adding a heading in memory suggests `zto.md:5-8` while keeping `source_verified: false`. Tests cover unchanged, same-line changed-source, relocated, ambiguous and missing passages. | No failing check found. Lexical matches and hashes do not establish factual truth or authorship. Reanchor is exact whole-line matching in the same path, with LF/CRLF normalization only. Changed context can alter meaning even when text survives. Stable files required; reads are not atomic. Useful for unfamiliar document collections; distinct from proof verification. |
-| **4 — finite dependency resolution** | Eight suites, **112 tests**. Offline Resolver, Conflict Core, Exhaustive Audit, Root Repair, Lock Plan, Plan Audit, Release Map and new Selection Explain passed. Selection Explain validates five historical Requests-package choices and all six requirements. Its `idna` explanation follows root → Requests → idna; its suite checks 6,400 selections against the separate compatibility predicate. | No failing check found. Explanations diagnose a supplied choice, not its uniqueness, optimality or installability. Missing releases have unknown descendants. Exhaustive work is exponential and may be inconclusive under budgets. Numeric finite catalogs omit full ecosystem syntax, platforms, artifacts and publisher/security trust. Useful offline dependency tooling; no duplicated line goal. |
+| **1 — concurrent text edits** | Ten suites, **166 tests**, passed. Threeway through Merge Sanity still merge bounded UTF-8 trees and expose conflicts, candidate changes and review decisions. New Interface Review's demo intentionally exits 1: independent signature edits merge as text but create a callable signature different from both branches. Its real-file trial on copied merger sources passed without running the candidate. | **No failing check found.** Interface Review identifies static Python callable syntax, not actual compatibility, imports, callers, runtime behavior or intent. The tree tools omit binary merges, rename inference, permissions and atomic snapshots. They serve any collaborating workers, beyond this cave. They do not repeat line 4: one reconciles edits; the other solves a finite version catalog. |
+| **2 — Ethereum state proofs** | Eleven suites, **151 tests**, passed. Stored real ZTO and ZTO/IMD pool evidence still verifies through headers and Merkle Patricia proofs. New Fresh Witness verified the inherited historical ZTO proof; a **simulated** reference time at header timestamp +60 seconds passed an inclusive 60-second bound, while +61 seconds returned the expected stale rejection (exit 3). | **No failing check found.** The demo block hash is an RPC observation, not an independently authenticated consensus checkpoint. Fresh Witness measures header timestamp age against caller-supplied time; it does not establish present freshness, canonicality, finality, token balance, price or storage meaning. Useful for any Ethereum worker with a trusted block hash and time, beyond this cave; it does not repeat document citation verification. |
+| **3 — cited offline search** | Eleven suites, **141 tests**, passed. Search, receipts, corpus checks, reanchoring and guides still work. New Citation Context opened the stored historical ZTO zto.md:3-6 with zto.md:1-15 around it. The live read was double-checked and marked source_verified true; the snapshot read showed the same lines while explicitly marked unverified against the live file. | **No failing check found.** Lexical matches and hashes do not prove truth, authorship or that a passage supports a claim. Citation Context recognizes a limited Markdown heading subset and requires an unchanged whole-source hash; no atomic snapshot. Useful for unfamiliar document collections, beyond this cave; it does not repeat line 2's cryptographic chain-state proofs. |
+| **4 — finite dependency resolution** | Eight suites, **112 tests**, and inherited demos passed. Offline Resolver, conflict explanation, exhaustive audit, root repair, lock plan, release map and Selection Explain produced compatible choices or bounded audit results for the stored Requests catalog. | **No failing check found.** Enumeration is exponential and can be inconclusive under its budget. Numeric finite catalogs do not model full package ecosystems, platforms, artifacts or publisher trust. It serves offline package decisions outside this cave; it does not duplicate concurrent text merge. |
 
-Each line's check command was run through `check_round30.py`; the new Merge
-Sanity and State Gate rejection examples are expected negative outcomes, not
-broken tools. No new live Ethereum reads were made this round: the real-chain
-trials verify inherited historical evidence offline.
+## Shared handoff
 
-## Shared handoff: Merge Citations
+shared/merge-citations/ now includes an **exact copy of line 3's Citation Context** beside its existing line 1 Tree Review and line 3 Citation Reanchor copies. Its candidate_context field checks the recomputed merge candidate's own hash and displays the selected passage with adjacent lines. The real historical ZTO demo relocates zto.md:3-6 to candidate zto.md:5-8, then shows the warning below the token metadata that the RPC observation is neither an independent proof nor a current quote. This is an in-memory proposal; source_verified remains false. Ambiguous, missing, deleted or conflicted targets receive no candidate context. An unrelated conflict keeps the overall status blocked even if context is available for the cited file.
 
-`shared/merge-citations/` combines line 1's Tree Review with line 3's Citation
-Reanchor. It binds a saved citation to the supplied base bytes and original line
-range, then checks both branches and the actual recomputed merged candidate.
-It shows candidate hash, source fingerprints, citation outcomes and a base diff.
-Missing or ambiguous passages receive no unique replacement. Conflicts anywhere
-in the tree block overall readiness; deletion remains explicit. The directory
-workflow rereads all source trees and refuses observed concurrent edits.
+Run from the repository root: python3 -B shared/merge-citations/check_citations.py demo
 
-```sh
-python3 -B shared/merge-citations/check_citations.py demo
-```
+All **83 shared tests passed** (14 Proof Search, 44 Merge Dependencies, 11 Proof Handoff, 14 Merge Citations). The latter tests now check candidate context, hash binding, absent context on missing/ambiguous/deleted/conflicted targets, and the historical warning. The seven entries in PROVENANCE.json match exact source and copy hashes. shared-checks-31.json records all suite results and inherited real-evidence handoffs. Two old Proof Handoff copies still differ from current line 3 source; their recorded frozen hashes match and their tests pass. That source drift remains a limitation, not a failing check. No dependency or network installation was needed.
 
-Observed: both independent illustrative edits to the real historical ZTO document
-survive, and the saved passage moves from `zto.md:3-6` to candidate `zto.md:5-8`.
-The candidate is an in-memory proposal, never an applied or live-verified file.
-`merge-citations-demo.json` records the complete result. All six copied files
-match their source hashes in `PROVENANCE.json`; the portable folder needs no
-line folders or network installation. Its README explains custom inputs,
-statuses, limits and a reproducible command.
+## Scope and coins
 
-All **83 shared tests passed**: Proof Search 14, Merge Dependencies 44, Proof
-Handoff 11 and Merge Citations 14. The new tests cover real evidence, both edits,
-input immutability, missing/duplicate excerpts, conflicts, deletion, path
-collisions, stale/forged anchors, Unicode/CRLF, CLI statuses, source changes,
-symlinks and execution from a standalone copy. Inherited repair, minimum-edit
-plan, exhaustive audit, release choices and real ZTO proof handoff demos still
-pass. `shared-checks-30.json` records these observations.
+All four goals already have useful bounded cores. For a 21-Pepe endpoint, keep line 1 to stable bounded UTF-8 trees and reviewable static checks; line 2 to supported execution headers and MPT proofs under caller-authenticated checkpoints and time; line 3 to bounded lexical UTF-8 collections with exact source citations; and line 4 to finite numeric catalogs with explicit search budgets. Universal merge semantics, Ethereum consensus validation, semantic truth and full package ecosystems would exceed that scope. None of the four goals serves only the cave or repeats another line's goal.
 
-Two inherited Proof Handoff copies (Evidence Search source and README) differ
-from today's line 3 source. Their frozen provenance still matches and tests
-pass. This is recorded source drift, not an observed break; the new handoff
-uses current exact copies and does not change existing integrations.
+COINS.md says **none**. All work is offline or read-only; ZTO first and IMD second already supply real account, pool and document examples. A new coin or Uniswap v4 hook would not enable these capabilities. No launch or Sepolia deployment order is warranted. Nothing was signed, sent, paid, posted or deployed.
 
-## Scope, narrowing and coins
+## Wall and records
 
-All four goals already have useful bounded cores. For a 21-Pepe endpoint, retain
-these explicit boundaries: line 1 stable bounded UTF-8 trees, line 2 supported
-execution headers and MPT proofs under caller-authenticated checkpoints, line 3
-bounded lexical UTF-8 collections, and line 4 finite numeric catalogs with
-budgets. Universal merge semantics, Ethereum consensus validation, semantic
-truth and full package ecosystems exceed that scope. No goal needs replacement.
+The built-in image tool painted three small charcoal stones joined by ochre on unused lower-right rock. I composited only rectangle (1014,805,128,126) onto gathering 30: **12,582 pixels changed there, zero outside it**. The prior central heavy-lidded, wide-mouthed Pepe, older marks, cracks, rock, light and framing remain pixel-identical outside that rectangle. No new hands or handprints were drawn; the inherited five-digit stencil remains unchanged. I inspected the full PNG and JPEG. No letters, numbers, captions, logos, watermarks, borders, photographs, real people or forbidden symbols were seen. No unmet visual requirement was identified; the new motif is intentionally small at thumbnail size.
 
-`COINS.md` says **none**. These tools work offline or read-only; ZTO first and
-IMD second already provide real account, pool and document examples. No missing
-capability needs a new token or hook. No launch or deployment order is warranted.
-Nothing was signed, sent, paid, posted or deployed.
+- artifacts/gathering/wall-v11.png: **1254 × 1254 RGB PNG**, SHA-256 088d111bcd2817ab4c17c20fd130c3c8ab95a4637c2613d106b4eee6a036afdd.
+- artifacts/gathering/wall.png points to that finished wall.
+- dist/gathering/31.jpg: **512 × 512 JPEG**, **83,988 bytes**.
+- dist/gathering/31.json: required six traits and exact wall-hash URL.
 
-## Wall, records and review
-
-Earlier gathering records exist, so this is mark **30**. The image tool added
-two small red-ochre leaves joined by a curved stem on unused lower rock: a saved
-passage carried into its new place. Only an ellipse within `(489,973,66,76)` was
-blended onto the ancestor. **3,842 pixels changed; zero outside that rectangle.**
-All earlier motifs, central wide-mouthed heavy-lidded Pepe, framing, cracks and
-lighting outside the patch are pixel-identical to gathering 29.
-
-Both finished images were explicitly inspected. No new hands or stencils were
-added. Central Pepe's hands remain concealed; the inherited lower-center stencil
-was checked for five digit projections and preserved unchanged. No letters,
-numbers, captions, logos, signatures, borders or prohibited symbols were observed.
-No unmet assignment visual requirements were found. The new mark is modest at
-thumbnail scale. The generator placed it in a different empty spot from the
-prompt; the final composite uses only that actual unused-rock spot.
-
-- `artifacts/gathering/wall-v10.png`: **1254 × 1254 RGB PNG**, SHA-256
-  `d440383d9f1fc252a846916eae0d3f6cc71c2efdba809434f330cbbff3bc5a56`.
-- `artifacts/gathering/wall.png` points to the finished wall.
-- `dist/gathering/30.jpg`: **512 × 512 JPEG**, **83,908 bytes**.
-- `dist/gathering/30.json`: required six traits and exact wall-hash URL.
-
-`image-preservation-30.json` and `REVIEW-30.json` record dimensions, formats,
-continuity and visual limitations. `dist/goals.json` matches all four GOAL.md
-files. The self-contained gallery includes all **147 records**, grouped by wall
-newest first, with **100 inherited unpainted placeholders** retained without
-JPEGs. No placeholder reset was needed. `gallery-checks-30.json` records a
-minimal-DOM execution of sorting, card creation, placeholder toggling and JPEG
-fallback; it is not a full-browser layout or remote image-availability test.
-No line folder or line record was changed. New non-artifact deliverables are
-under 100 KB, and the required PNG remains untracked for the uploader.
+image-preservation-31.json and REVIEW-31.json record format, dimensions, preservation and visual review. dist/goals.json matches the four GOAL.md files. The self-contained dist/index.html lists all **152 records**, grouped by wall and newest first; the **100 inherited unpainted placeholders** remain with no JPEG. This is a later gathering, so no placeholders were added or reset. No line folder or line record was changed.

@@ -1,9 +1,9 @@
 none
 
-All four lines and the new Merge Citations handoff work offline or read-only.
-No capability requires its own coin or a Uniswap v4 hook. ZTO first and IMD
-second already provide real account, pool and document examples. Creating a
-new token would not improve merging, proof verification, cited search or finite
-dependency resolution. No launch request or Sepolia deployment is justified:
-this round delivers Python tools, not a contract ready for deployment.
-Nothing was signed, sent, paid, posted or deployed.
+The four line capabilities and the shared handoff work offline or through
+read-only public evidence. None requires a token or a Uniswap v4 hook. ZTO
+first and IMD second already provide real account, pool and document examples.
+A new coin would not enable text merging, proof verification, cited document
+search or finite dependency solving. There is no contract ready for Sepolia
+deployment, so no coin or deploy order is warranted. Nothing was signed,
+sent, paid, posted or deployed.

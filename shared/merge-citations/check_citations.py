@@ -18,9 +18,10 @@ def module(name, relative):
 
 tree = module('citation_merge_tree', 'tools/tree-review/tree_review.py')
 anchor_tool = module('citation_merge_anchor', 'tools/citation-reanchor/reanchor.py')
+context_tool = module('citation_merge_context', 'tools/citation-context/context.py')
 LIMITS = [
     'Suggestions refer to a recomputed in-memory candidate, never an applied file.',
-    'An intact excerpt may have a changed meaning in its new context; review it.',
+        'Review the exact candidate context; an intact excerpt may have a changed meaning.',
     'The saved anchor must match the supplied base bytes and original line range.',
     'No author authentication, factual verification, semantic merge or approval.',
     'Exact complete-line matching; only LF/CRLF endings normalize.',
@@ -60,9 +61,17 @@ def inspect(sources, anchor):
                  if item['status'].endswith('conflict')]
     if entry['status'].endswith('conflict'):
         candidate = None
+        candidate_context = None
         status = 'blocked'
     else:
         candidate = check(entry['candidate'])
+        unique = candidate['unique_current_citation']
+        if unique is not None:
+            selection = {key: unique[key] for key in ('path', 'line_start', 'line_end', 'sha256')}
+            candidate_context = context_tool.inspect_bytes(
+                entry['candidate'].encode('utf-8'), selection, before=3, after=9)
+        else:
+            candidate_context = None
         status = ('blocked' if conflicts else 'deleted' if entry['candidate'] is None
                   else 'ready-for-review' if candidate['unique_current_citation']
                   else 'needs-review')
@@ -72,6 +81,7 @@ def inspect(sources, anchor):
             'conflicted_paths': conflicts, 'merge_status': entry['status'],
             'candidate_sha256': entry['candidate_sha256'],
             'branches': branches, 'candidate': candidate,
+            'candidate_context': candidate_context,
             'candidate_diff_from_base': None if entry['candidate'] is None else
                 tree.review.unified(original, entry['candidate'], 'BASE', 'CANDIDATE'),
             'limits': LIMITS}

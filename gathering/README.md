@@ -1,43 +1,38 @@
-# Gathering 30 — The Passage Carried Forward
+# Gathering 31 — Three Evidences Meet
 
-This round checked all four lines and added **Merge Citations**, connecting
-three-way merge review with exact citation relocation:
+This round checked all four lines and extended the portable Merge Citations
+handoff with candidate context from line 3's Citation Context. It shows exact
+surrounding lines for a unique relocated passage in a recomputed merge. The
+historical ZTO demo remains an in-memory proposal; it makes no current chain
+claim and applies no document edits.
 
-```sh
-python3 -B shared/merge-citations/check_citations.py demo
-```
+Run from the repository root:
 
-On the inherited real ZTO document, the saved passage at `zto.md:3-6` survives
-both edits and moves to candidate `zto.md:5-8`. Suggestions refer to in-memory
-candidates; nothing is applied. See `shared/merge-citations/README.md` for custom
-inputs, limits, statuses, provenance and 14 behavioral tests.
+    python3 -B shared/merge-citations/check_citations.py demo
 
-All 520 line tests, 42 expected demo/check outcomes and 83 shared tests passed.
-`REPORT.md` covers all lines, observed limitations, scope and the new handoff.
-`COINS.md` explains why no coin or deployment request is needed.
+The 40 line suites passed 570 tests, and 47 demonstrations returned their
+expected codes. The four shared suites passed 83 tests. REPORT.md covers each
+line's working behavior and limits; COINS.md explains why no coin or deployment
+order is needed.
 
-```sh
-python3 -B gathering/check_round30.py
-python3 -B gathering/check_shared_round30.py
-python3 -B gathering/build_gallery.py
-node gathering/check_gallery30.mjs
-python3 -B gathering/check_deliverable_round30.py
-```
+Reproduce the local checks:
 
-The wall is `artifacts/gathering/wall-v10.png`, a 1254 × 1254 RGB PNG, also
-referenced by `artifacts/gathering/wall.png`. The numbered record is
-`dist/gathering/30.json` and its preview is a 512 × 512 JPEG at `30.jpg`.
-The gallery contains 147 records, including 100 preserved unpainted slots.
+    python3 -B gathering/check_round31.py
+    python3 -B gathering/check_shared_round31.py
+    python3 -B gathering/build_gallery.py
+    node gathering/check_gallery31.mjs
+    python3 -B gathering/check_deliverable_round31.py
 
-The built-in image tool edited the ancestor PNG. `finish_wall30.mjs` retained
-only its small pair of ochre leaves on unused rock and encoded the JPEG using
-the inherited ordinary-file jpeg-js encoder. The helper is a **one-time build
-step**, not a repeatable check: the draft was replaced with the final PNG.
-No dependency was installed. No other images were saved in the workspace.
+The finished wall is artifacts/gathering/wall-v11.png, a 1254 × 1254 RGB PNG,
+also pointed to by artifacts/gathering/wall.png. Its numbered record is
+dist/gathering/31.json and its 512 × 512 JPEG preview is 31.jpg. The gallery
+lists 152 records, including 100 preserved unpainted slots.
 
-Both finished images were visually reviewed. All pixels outside the local mark
-rectangle, including every ancestor motif, are unchanged. The generated mark
-was placed in a different empty spot from the prompt and is subdued in the
-thumbnail. No unmet assignment visual requirements were observed. Details and
-format/preservation evidence are in `REVIEW-30.json` and
-`image-preservation-30.json`. No line folder or line record was edited.
+The built-in image tool supplied the small lower-right mark. The one-time
+finish_wall31.mjs helper retained only its local pigment on the ancestor wall
+and encoded the JPEG using the inherited ordinary-file jpeg-js encoder.
+Do not run that helper again on the finished wall. The full wall and preview
+were visually inspected; no unmet visual requirement was identified. The
+small mark is subdued at thumbnail size. REVIEW-31.json and
+image-preservation-31.json record the formats, hashes and pixel continuity.
+No line folder or line record was edited.

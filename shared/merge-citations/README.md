@@ -2,7 +2,8 @@
 
 Check whether a saved citation survives concurrent document edits **before**
 adopting their merge. This portable folder connects line 1's Tree Review to
-line 3's Citation Reanchor. Python 3.9+ and standard library only.
+line 3's Citation Reanchor and Citation Context. Python 3.9+ and standard
+library only.
 
 ```sh
 python3 -B shared/merge-citations/check_citations.py demo
@@ -12,7 +13,9 @@ Tried on the inherited historical ZTO document: one contributor adds a heading,
 another adds a review reminder. Both edits survive the clean merge. The saved
 `zto.md:3-6` passage occurs exactly once at candidate `zto.md:5-8`. The report
 shows the citation in both branches, the candidate's exact SHA-256, source tree
-fingerprints, and a diff from base. These are illustrative edits to real stored
+fingerprints, a diff from base, and exact surrounding lines from the in-memory
+candidate. The context exposes the historical observation warning below the
+relocated token metadata. These are illustrative edits to real stored
 observations, not a new chain read or current quote. Nothing is written.
 
 ## Use on your documents
@@ -30,6 +33,11 @@ The anchor must match BASE's entire source hash **and** original excerpt/range.
 A forged or stale base anchor fails before any candidate suggestion. Every
 source tree is read again after review; observed concurrent changes fail.
 `source_trees_rechecked` records those second reads, not an atomic snapshot.
+`candidate_context` is present only when the target file has an unambiguous
+intact citation. It is hash-pinned to the candidate bytes, labels selected lines
+and nearby lines, and reports `source_verified: false` because the candidate
+has not been applied. It is a reading aid, including if an unrelated path has a
+merge conflict; it never turns a blocked merge into a ready one.
 
 | Status | Meaning |
 | --- | --- |
@@ -71,7 +79,7 @@ file/directory collisions, an unrelated conflict, stale/forged anchors, CRLF,
 Unicode, CLI exit codes, symlinks, concurrent changes and standalone execution.
 Tests use only `test/scratch/`. These observations are not independent certification.
 
-`PROVENANCE.json` records six exact source/copy SHA-256 pairs. The five engine
+`PROVENANCE.json` records seven exact source/copy SHA-256 pairs. The six engine
 files and historical ZTO document are ordinary unchanged copies; no line folder,
 submodule, network installation or external dependency is needed. Keep this
 whole folder together. The new glue is `check_citations.py`. No coin is needed.

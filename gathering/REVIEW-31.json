@@ -1,0 +1,39 @@
+{
+  "number": 31,
+  "line_files_and_records_unchanged": true,
+  "line_tests_passed": 570,
+  "line_demos_passed": 47,
+  "shared_tests_passed": 83,
+  "gallery_records": 152,
+  "preserved_placeholders": 100,
+  "wall": {
+    "path": "artifacts/gathering/wall-v11.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "088d111bcd2817ab4c17c20fd130c3c8ab95a4637c2613d106b4eee6a036afdd"
+  },
+  "preview": {
+    "path": "dist/gathering/31.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 83988
+  },
+  "changed_pixels": 12582,
+  "changed_pixels_outside_rectangle": 0,
+  "visual_review": {
+    "method": "Local inspection of finished wall and JPEG preview.",
+    "pepe": "Wide mouth and heavy-lidded eyes preserved.",
+    "hands": "No new hands or handprints. Central Pepe hands concealed; inherited lower-center five-digit stencil retained without changes.",
+    "text_or_prohibited_symbols_observed": false,
+    "limitation": "The three joined stones are intentionally small at thumbnail scale. Only their unused-rock area was retained from the generated draft."
+  },
+  "unmet_visual_requirements": [],
+  "coins": "none"
+}
