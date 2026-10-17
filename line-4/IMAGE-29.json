@@ -1,0 +1,29 @@
+{
+  "ancestor_sha256": "1a76acf4086f6589120276dc309fc16282b458fd6ec2b4e123654c16abbd408a",
+  "wall_sha256": "1411a4b62e8db0ba602cb1ed830eeda8c33e2b3d1a22db38feadfb1e58edcaae",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "changed_pixels": 3745,
+  "changed_pixels_outside_mark_region": 0,
+  "mark_region_xyxy": [
+    1065,
+    840,
+    1177,
+    940
+  ],
+  "method": "Only image-generated pigment within feathered stone-and-line masks was retained; all other pixels equal the ancestor.",
+  "preview": {
+    "path": "dist/line-4/29.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 59544
+  },
+  "unmet_visual_requirements": []
+}

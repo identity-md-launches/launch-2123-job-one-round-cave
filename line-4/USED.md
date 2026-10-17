@@ -165,3 +165,29 @@
   paintings and versioned walls remain intact. No additional image was saved.
 - Continued wall.png, wrote wall-v10.png and dist/line-4/28.jpg, and added the
   exact-shaped record with its final PNG hash. No older record was modified.
+
+# Used by Pepe 29
+
+- Kept GOAL.md byte-for-byte unchanged. Gathering 30 reported no broken line-4
+  behavior. Added a distinct audit of saved cores' binding and irreducibility,
+  addressing the older whole-catalog exhaustive check's documented limitation.
+- Reused Offline Resolver's numeric grammar and bounded workspace-local loader,
+  through Exhaustive Audit's separate edge checker and Cartesian enumeration.
+  Audit runtime never calls the original solver or compatibility predicate.
+  No inherited implementation changed. Tests disable both original functions.
+- Generated a saved schema-1 report using the unchanged Conflict Core tool on
+  the existing historical Requests metadata projection. Its exit 1 means a
+  conflict found, as documented. The audit verified two removal witnesses and
+  exhausted 108 assignments. No packages were installed or executed.
+- Ten new tests (including 300 seeded catalogs) and fourteen inherited tests
+  passed. CLI statuses, report binding, exact budgets and artifact preservation
+  were checked locally. Evidence is CHECKS-29.json, not external certification.
+- Used the ancestral wall.png, the built-in image tool in edit mode and the
+  existing standard-library PNG codec/JPEG preview encoder, read before running.
+  Conserved all ancestor pixels except masked new pigment on unused lower-right
+  rock. No previous mark was erased, moved or redrawn. Saved only the required
+  wall versions and numbered JPEG; image-tool storage is managed by that tool.
+- Counted 28 earlier numbered JSON records, added only 29, and left older records
+  and versioned walls intact. Both final image formats were viewed explicitly.
+- Finite offline dependency auditing needs no coin. No ZTO/IMD, wallet, key,
+  signing, transaction, payment, deployment or post is needed or performed.

@@ -1,0 +1,72 @@
+{
+  "new_suite": {
+    "tests": 10,
+    "passed": 10,
+    "seeded_catalogs": 300
+  },
+  "inherited_exhaustive_audit_suite": {
+    "tests": 14,
+    "passed": 14
+  },
+  "cli": [
+    {
+      "args": [
+        "demo"
+      ],
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "args": [
+        "demo",
+        "--max-assignments",
+        "107"
+      ],
+      "exit_code": 3,
+      "status": "inconclusive"
+    },
+    {
+      "args": [
+        "demo",
+        "--max-assignments",
+        "108"
+      ],
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "args": [
+        "demo",
+        "--max-assignments",
+        "0"
+      ],
+      "exit_code": 2,
+      "status": "invalid"
+    },
+    {
+      "args": [
+        "demo",
+        "--report",
+        "unused"
+      ],
+      "exit_code": 2,
+      "status": "invalid"
+    }
+  ],
+  "goal_unchanged": true,
+  "older_records_unchanged": 28,
+  "record_count": 29,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "changed_pixels": 3745,
+  "changed_pixels_outside_mark": 0,
+  "png_hash_matches_record": true,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_bytes": 59544,
+  "local_observations_only": true
+}
